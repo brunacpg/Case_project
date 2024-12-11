@@ -48,4 +48,4 @@ Para explorar essas questões, utilizaremos técnicas modernas de NLP, como aná
   - Transformaremos as avaliações textuais (`Text`) em um problema de classificação, usando `Score` como variável alvo.
   - Exemplo: 4 e 5 → Positivo, 1 e 2 → Negativo, e 3 → Neutro ou descartado.
 - **Extração de Tópicos**:
-  - Descobriremos os tópicos mais frequentes nas avaliações (ex.: "qualidade", "entrega") usando técnicas como Latent Dirichlet Allocation (LDA) ou Transformers.
+  - Descobriremos os tópicos mais frequentes nas avaliações (ex.: "qualidade", "entrega") 
