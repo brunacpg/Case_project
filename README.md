@@ -29,7 +29,7 @@ Para explorar essas questões, utilizaremos técnicas modernas de NLP, como aná
 - **Restrições técnicas**: Trabalhar com dados textuais pode ser computacionalmente caro. Usaremos estratégias otimizadas e modelos pré-treinados para eficiência.
 
 ## **Descrição do Dataset**
-- **Total de Registros**: 568.454
+- **Total de Registros**: 28.423
 - **Total de Colunas**: 10
 - **Atributos Disponíveis**:
   1. **Id**: Identificador único da avaliação.
