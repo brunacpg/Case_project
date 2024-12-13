@@ -107,5 +107,9 @@ plt.xlabel('Sentimento')
 plt.ylabel('Quantidade')
 plt.show()
 
+### Resultado
+
+![Distribuição dos Sentimentos](https://raw.githubusercontent.com/brunacpg/MVP-Machine-Learning/main/Captura%20de%20tela%202024-12-13%20133218.png)
+
 
 
