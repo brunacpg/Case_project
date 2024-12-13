@@ -106,6 +106,7 @@ df['Sentiment'].value_counts().plot(kind='bar', title='Distribuição dos Sentim
 plt.xlabel('Sentimento')
 plt.ylabel('Quantidade')
 plt.show()
+```
 
 ### Resultado
 
