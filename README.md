@@ -57,6 +57,55 @@ Essa estrutura segue corretamente o objetivo de um MVP para análise de sentimen
 - Está alinhada com os requisitos de um projeto acadêmico ou prático.
 - Permite aprofundar nas etapas de análise e validação com modelos.
 
+## Bloco 2: Carregar e Preparar os Dados
+
+### Explicação
+
+Carregamos o dataset e realizamos o pré-processamento:
+- Filtramos as colunas relevantes (`Score` e `Text`).
+- Removemos valores nulos e duplicados.
+- Excluímos avaliações neutras (`Score == 3`).
+- Mapeamos as pontuações para rótulos binários:
+  - `0` (negativo)
+  - `1` (positivo).
+- Exibimos a distribuição dos sentimentos.
+
+### Código
+
+```python
+# 1. Carregar e preparar os dados
+df = pd.read_csv('amostra.csv')
+
+# Contar as linhas antes do tratamento
+initial_count = len(df)
+
+# Filtrar colunas relevantes
+df = df[['Score', 'Text']]
+
+# Remover valores nulos e duplicados
+df.dropna(inplace=True)
+df.drop_duplicates(inplace=True)
+
+# Contar as linhas após o tratamento
+final_count = len(df)
+print(f"Linhas removidas: {initial_count - final_count}")
+print(f"Linhas restantes: {final_count}")
+
+# Excluir avaliações neutras
+df = df[df['Score'] != 3]
+
+# Mapear Score para Sentimento (0: Negativo, 1: Positivo)
+df['Sentiment'] = df['Score'].map({1: 0, 2: 0, 4: 1, 5: 1})
+
+# Exibir a distribuição de sentimentos
+print(f"Linhas removidas: {initial_count - final_count} (antes: {initial_count}, depois: {final_count})")
+print("\nDistribuição dos Sentimentos:")
+print(df['Sentiment'].value_counts())
+
+df['Sentiment'].value_counts().plot(kind='bar', title='Distribuição dos Sentimentos', figsize=(6,4))
+plt.xlabel('Sentimento')
+plt.ylabel('Quantidade')
+plt.show()
 
 
 
